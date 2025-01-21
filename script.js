@@ -1,4 +1,4 @@
-let URL = "https://teachablemachine.withgoogle.com/models/lO6N-01Me/";
+let URL = "https://teachablemachine.withgoogle.com/models/VRKM9GI9N/";
 
 
 
@@ -111,9 +111,9 @@ function checkPose(prediction, video) {
                 }
                 break;
             case '3':
-                if ((time >= 9.9 && time <= 10.5 && !poseState.firstWindowTriggered) ||
-                    (time >= 10.5 && time <= 12.5 && !poseState.secondWindowTriggered)) {
-                    if (time <= 10.5) {
+                if ((time >= 7.9 && time <= 8.5 && !poseState.firstWindowTriggered) ||
+                    (time >= 8.6 && time <= 10.9 && !poseState.secondWindowTriggered)) {
+                    if (time <= 8.5) {
                         poseState.firstWindowTriggered = true;
                     } else {
                         poseState.secondWindowTriggered = true;
@@ -124,7 +124,7 @@ function checkPose(prediction, video) {
                 }
                 break;
             case '4':
-                if (time >= 14.0 && time <= 17.0 && !poseState.triggered) {
+                if (time >= 11.0 && time <= 12.9 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
@@ -214,7 +214,7 @@ async function playInstructionVideo() {
     if (model) {
         processFrame();
     } else {
-        console.log("https://teachablemachine.withgoogle.com/models/lO6N-01Me/");
+        console.log("https://teachablemachine.withgoogle.com/models/VRKM9GI9N/");
     }
 }
 
